@@ -73,7 +73,10 @@ router.post("/auth/login", async(req, res) => {
 
 // LOGOUT ROUTE
 router.get("/auth/logout", (req, res) => {
-    res.send("logout");
+    // Remove the userId property from the session
+    req.session.userId = null;
+    // Redirect back to the main page
+    res.redirect("/");
 });
 
 

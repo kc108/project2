@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("partials/head") %>
+
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("partials/header") %>
+    <main>
+      <h1 class="title">Travel Vacation Planner</h1>
+      <h2 class="subtitle">Where your Destination Begins</h2>
+      <a href="/auth/signup"><button class="button">SIGNUP</button></a>
+      <a href="/auth/login"><button class="button">LOGIN</button></a>
+    </main>
+
     <!-- THE HEAD TAG PARTIAL -->
-    <%- include("partials/head") %>
-
-    <body>
-        <!-- THE HEADER TAG PARTIAL -->
-        <%- include("partials/header") %>
-        <main>
-
-
-        </main>
-        <!-- THE HEAD TAG PARTIAL -->
-        <%- include("partials/footer") %>
-    </body>
+    <%- include("partials/footer") %>
+  </body>
 </html>
