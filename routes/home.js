@@ -7,8 +7,33 @@ const User = require("../models/user");
 
 
 ///////////////////////////////
+// Custom Middleware Functions
+////////////////////////////////
+const addUserToRequest = async (req, res, next) => {
+    if (req.session.userId) {
+        req.user = await User.findById(req.session.userId);
+        next()
+    } else {
+        next()
+    };
+};
+
+// Auth Middleware Function to check if user authorized for route
+const isAuthorized = (req, res, next) => {
+    // Check if user session property exists, if not redirect back to login page
+    if (req.user) {
+        // If user exists, wave them by to go to route handler
+        next()
+    } else {
+        // Redirect the not logged in user
+        res.redirect("/auth/login")
+    };
+};
+
+///////////////////////////////
 // Router Specific Middleware
 ////////////////////////////////
+router.use(addUserToRequest);
 
 ///////////////////////////////
 // Router Routes
@@ -79,8 +104,29 @@ router.get("/auth/logout", (req, res) => {
     res.redirect("/");
 });
 
+// 'travelplans.ejs' Index Route render view (we will include new form on index page - protects by authorization)
+router.get("/travelplans", isAuthorized, async (req, res) => {
+    // Get updated user
+    const user = await User.findOne({ username: req.user.username });
+    // Render template passing it list of travelplans
+    res.render("travelplans", {
+        travelplans: user.travelplans,
+    });
+});
+
+// 'Travelplans' create route when form is submitted
+router.post("/goals", isAuthorized, async (req, res) => {
+    // Fetch up to date user
+    const user = await User.findOne({ username: req.user.username });
+    // push new travel plan and save
+    user.travelplans.push(req.body);
+    await user.save();
+    // Redirect back to goals index
+    res.redirect("/travelplans")
+});
+
 
 ///////////////////////////////
 // Export Router
 ////////////////////////////////
-module.exports = router
+module.exports = router;

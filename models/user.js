@@ -5,7 +5,7 @@ const { Schema, model } = require("../db/connection.js");
 const Travelplan = new Schema({
     tripDate: Date, 
     subHeading: String,
-    Notes: String, 
+    notes: String, 
     address: String
 });
 
