@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("../partials/head") %>
+
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("../partials/header") %>
+
+    <main>
+
+      <!-- *********DISPLAY OUR GOALS********* -->
+      <h1 class="title">My Destination</h1>
+      <a href="/auth/logout"><button class="button">Logout</button></a>
+      <% for (travelplan of travelplans) { %>
+      <h2 class="subtitle is-3"><%= travelplan.location %></h2>
+      <h2 class="subtitle is-3"><%= travelplan.tripDate %></h2>
+
+      <% } %>
+
+      <!-- **********NEW TRAVELPLANS FORM**************** -->
+      <form action="/travelplans" method="post">
+        <input type="text" placeholder="Enter Your Destination" name="text" />
+        <input type="text" placeholder="Day of Week, Month, Day" name="text" />
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("../partials/footer") %>
+  </body>
+</html>

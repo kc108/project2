@@ -4,6 +4,7 @@ const mongoose = require("./connection");
 ///////////////////////////////////////////
 // IMPORT YOUR MODELS BELOW
 ///////////////////////////////////////////
+const User = require("../models/User");
 
 ///////////////////////////////////////////
 // DO YOUR DATABASE OPERATIONS IN BELOW FUNCTION
@@ -14,6 +15,11 @@ const seed = async () => {
   mongoose.connection.db.dropDatabase();
 
   //*********Code Goes Here
+  console.log("seed");
+  const user = await User.create({
+    username: "Koda",
+    password: "$2a$10$13t59LPb1jKySqBZdOvdVOfzMaegXrFmC8tpG0jyDbZqx1ZgH6XLq",
+  });
 
   //***************************** */
 

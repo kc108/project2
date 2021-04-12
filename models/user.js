@@ -3,7 +3,8 @@ const { Schema, model } = require("../db/connection.js");
 
 // The Itenarary Schema
 const Travelplan = new Schema({
-    tripDate: Date, 
+    location: String,
+    tripDate: String, 
     subHeading: String,
     notes: String, 
     address: String
@@ -14,7 +15,7 @@ const UserSchema = new Schema(
     {
         username: { type: String, unique: true, required: true },
         password: { type: String, required: true },
-        itenarary: [Travelplan],
+        travelplans: [Travelplan],
     }, 
     { timestamps: true }
 )

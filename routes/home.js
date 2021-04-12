@@ -5,6 +5,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const User = require("../models/user");
 
+const travelplansCtrl = require('../controllers/travelplan');
 
 ///////////////////////////////
 // Custom Middleware Functions
@@ -41,6 +42,13 @@ router.use(addUserToRequest);
 router.get("/", (req, res) => {
     res.render("home")
 });
+
+///////////////////////////////
+// User Routes
+////////////////////////////////
+router.get("/user/index", isAuthorized, travelplansCtrl.index);
+    
+
 
 ///////////////////////////////
 // AUTH RELATED ROUTES
@@ -82,7 +90,7 @@ router.post("/auth/login", async(req, res) => {
                 // Create user session property
                 req.session.userId = user._id;
                 // Redirect to /itenarary
-                res.redirect("/travelplans")
+                res.redirect("/user/index")
             } else {
                 // Send error is password does not match
                 res.json({ error: " Passwords do not match "});
@@ -104,26 +112,14 @@ router.get("/auth/logout", (req, res) => {
     res.redirect("/");
 });
 
-// 'travelplans.ejs' Index Route render view (we will include new form on index page - protects by authorization)
-router.get("/travelplans", isAuthorized, async (req, res) => {
-    // Get updated user
-    const user = await User.findOne({ username: req.user.username });
-    // Render template passing it list of travelplans
-    res.render("travelplans", {
-        travelplans: user.travelplans,
-    });
-});
+// INDEX: 'travelplans.ejs' Index Route render view (we will include new form on index page - protects by authorization)
+router.get("/travelplans", isAuthorized, travelplansCtrl.index);
 
-// 'Travelplans' create route when form is submitted
-router.post("/goals", isAuthorized, async (req, res) => {
-    // Fetch up to date user
-    const user = await User.findOne({ username: req.user.username });
-    // push new travel plan and save
-    user.travelplans.push(req.body);
-    await user.save();
-    // Redirect back to goals index
-    res.redirect("/travelplans")
-});
+// router NEW: 
+router.get("/new", travelplansCtrl.new)
+
+// CREATE: 'Travelplans' create route when form is submitted
+// router.post("/", isAuthorized, travelplansCtrl.create);
 
 
 ///////////////////////////////
