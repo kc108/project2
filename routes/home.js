@@ -57,6 +57,7 @@ router.get("/user/new", isAuthorized, travelplansCtrl.new);
 // DELETE
 
 // UPDATE
+// router.put("/user/:id", isAuthorized, travelplansCtrl.update);
 
 // CREATE
 router.post("/user/new", isAuthorized, travelplansCtrl.create);
