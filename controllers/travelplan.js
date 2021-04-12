@@ -14,12 +14,41 @@ const newTravelplans = async (req, res) => {
     res.render("user/new", { location: 'Add Destination' });
 };
 
-// CREATE
+// DELETE
 
+// UPDATE
+
+// CREATE
+const create = async (req, res) => {
+        const user = req.user;
+        // push a new plant and save
+        user.travelplans.push(req.body);
+        await user.save();
+        const travelplan = user.travelplans[user.travelplans.length - 1];
+        // redirect back to images index
+        res.redirect(`/user/${travelplan._id}/edit`);
+      };
+
+// EDIT
+const edit = async (req, res) => {
+    // user
+    const user = req.user;
+    // find the travelplan that matches the id
+    const travelplan = user.travelplans.find(travelplan => (travelplan._id.toString() === req.params.id))
+    console.log(travelplan);
+    // render the edit page
+    res.render("user/edit", { travelplan })
+};
+
+
+// SHOW
 
 
 module.exports = {
     index,
-    new: newTravelplans
-    // create
+    new: newTravelplans,
+    // destroy: deleteTravelplan, 
+    // update, 
+    create,
+    edit    
 };

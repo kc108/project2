@@ -8,22 +8,22 @@
 
     <section class="hero is-primary has-text-centered">
       <div class="hero-body">
-        <p class="title">Itenarary for <%= travelplans.location %> </p>
+        <p class="title">Itenarary for <%= travelplan.location %> </p>
       </div>
     </section>
     <br><br>
     <form action="/user/new" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
-      Day: <input type="text" name="name" placeholder="Planned Activity"/>
+      Location: <input type="text" name="location" placeholder="location" value="<%= travelplan.location %>" />
+      Day: <input type="text" name="tripDate" placeholder="Planned Activity"/>
       <br><br>
-      Subheading: <input type="description" name="Subheading" placeholder="Subheading/Category"/><br><br>
+      Subheading: <input type="description" name="subHeading" placeholder="Subheading/Category"/><br><br>
       Notes: <input type="text" name="notes" placeholder="Notes" /><br><br>
-      Address: <input type="text" name="address" placeholder="Address Location" />
+      Address: <input type="text" name="address" placeholder="Address Location" value="<%= travelplan.address %>"
+      />
       <br><br>
       <input type="submit" name="" value="add travelplan" />
     </form>
     <br><br>
-
-
     
     <!-- THE FOOTER TAG PARTIAL -->
     <%- include("../partials/footer") %>

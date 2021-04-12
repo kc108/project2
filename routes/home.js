@@ -43,11 +43,30 @@ router.get("/", (req, res) => {
     res.render("home")
 });
 
+
 ///////////////////////////////
 // User Routes
 ////////////////////////////////
+// INDEX
 router.get("/user/index", isAuthorized, travelplansCtrl.index);
-    
+
+// NEW
+router.get("/user/new", isAuthorized, travelplansCtrl.new);
+
+
+// DELETE
+
+// UPDATE
+
+// CREATE
+router.post("/user/new", isAuthorized, travelplansCtrl.create);
+
+// EDIT
+router.get("/user/:id/edit", isAuthorized, travelplansCtrl.edit);
+
+// SHOW
+// router.post("/user/new", travelplansCtrl.show);
+
 
 
 ///////////////////////////////
@@ -111,15 +130,6 @@ router.get("/auth/logout", (req, res) => {
     // Redirect back to the main page
     res.redirect("/");
 });
-
-// INDEX: 'travelplans.ejs' Index Route render view (we will include new form on index page - protects by authorization)
-router.get("/travelplans", isAuthorized, travelplansCtrl.index);
-
-// router NEW: 
-router.get("/new", travelplansCtrl.new)
-
-// CREATE: 'Travelplans' create route when form is submitted
-// router.post("/", isAuthorized, travelplansCtrl.create);
 
 
 ///////////////////////////////
