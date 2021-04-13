@@ -36,10 +36,12 @@ const update = async (req, res) => {
 const create = async (req, res) => {
         const user = req.user;
         // push a new plant and save
+        console.log(req.body)
         user.travelplans.push(req.body);
         await user.save();
         const travelplan = user.travelplans[user.travelplans.length - 1];
         // redirect back to images index
+        // **res.redirect(`/user/${travelplan._id}`);
         res.redirect("/user/index");
       };
 

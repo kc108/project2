@@ -13,6 +13,8 @@
       <h1 class="title">My Destination</h1>
       <a href="/auth/logout"><button class="button">Logout</button></a>
       <% for (travelplan of travelplans) { %>
+        <a href="/user/<%= travelplan.id %>/edit">Edit</a>
+        <a href="/user/<%= travelplan.id %>">Details</a>
       <h2 class="subtitle is-3"><%= travelplan.location %></h2>
       <h2 class="subtitle is-3"><%= travelplan.tripDate %></h2>
 
@@ -20,8 +22,13 @@
 
       <!-- **********NEW TRAVELPLANS FORM**************** -->
       <form action="/user/new" method="post">
-        <input type="text" placeholder="Enter Your Destination" name="location" />
-        <input type="text" placeholder="Day of Week, Month, Day" name="tripDate" />
+        <input type="text" placeholder="Enter Your Destination" name="location" required />
+        <input type="text" placeholder="Day of Week, Month, Day" name="tripDate" required />
+        <input type="description" name="subHeading" placeholder="Subheading/Category" />
+
+        <input type="text" name="notes" placeholder="Notes" />
+
+        <input type="text" name="address" placeholder="Address Location" />
         <input type="submit" value="Submit" />
       </form>
     </main>

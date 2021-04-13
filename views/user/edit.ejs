@@ -13,9 +13,9 @@
     </section>
     <br><br>
     <form action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
-      Location: <input type="text" name="location" placeholder="location" value="<%= travelplan.location %>" /><br><br>
+      Location: <input type="text" name="location" placeholder="location" value="<%= travelplan.location %>" required/><br><br>
 
-      Day: <input type="text" name="tripDate" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"/>
+      Day: <input type="text" name="tripDate" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"required />
       <br><br>
 
       Subheading: <input type="description" name="subHeading" placeholder="Subheading/Category" value="<%= travelplan.subHeading %>"/><br><br>
