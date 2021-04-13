@@ -17,6 +17,20 @@ const newTravelplans = async (req, res) => {
 // DELETE
 
 // UPDATE
+const update = async (req, res) => {
+    const user = req.user;
+    // console.log(user)
+    // find the travelplan that matches the id
+    const travelplan = user.travelplans.find(travelplan => (travelplan._id.toString() === req.params.id))
+    console.log(travelplan)
+    // modify the image
+    Object.assign(travelplan, req.body)
+    //save the user
+    await user.save()
+    // redirect to /images
+    res.redirect("/user/index");
+};
+
 
 // CREATE
 const create = async (req, res) => {
@@ -26,7 +40,7 @@ const create = async (req, res) => {
         await user.save();
         const travelplan = user.travelplans[user.travelplans.length - 1];
         // redirect back to images index
-        res.redirect(`/user/${travelplan._id}/edit`);
+        res.redirect("/user/index");
       };
 
 // EDIT
@@ -48,7 +62,7 @@ module.exports = {
     index,
     new: newTravelplans,
     // destroy: deleteTravelplan, 
-    // update, 
+    update, 
     create,
     edit    
 };

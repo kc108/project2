@@ -12,15 +12,20 @@
       </div>
     </section>
     <br><br>
-    <form action="/user/new" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
+    <form action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
       Location: <input type="text" name="location" placeholder="location" value="<%= travelplan.location %>" /><br><br>
-      Day: <input type="text" name="tripDate" placeholder="Planned Activity" value="travelplan.tripDate"/>
+
+      Day: <input type="text" name="tripDate" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"/>
       <br><br>
-      Subheading: <input type="description" name="subHeading" placeholder="Subheading/Category" value="travelplan.subHeading"/><br><br>
-      Notes: <input type="text" name="notes" placeholder="Notes" value="travelplan.notes" /><br><br>
+
+      Subheading: <input type="description" name="subHeading" placeholder="Subheading/Category" value="<%= travelplan.subHeading %>"/><br><br>
+
+      Notes: <input type="text" name="notes" placeholder="Notes" value="<%= travelplan.notes %>" /><br><br>
+
       Address: <input type="text" name="address" placeholder="Address Location" value="<%= travelplan.address %>"
       />
       <br><br>
+
       <input type="submit" name="" value="Update Itenarary" />
     </form>
     <br><br>
