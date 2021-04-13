@@ -29,6 +29,11 @@
       <input type="submit" name="" value="Update Itenarary" />
     </form>
     <br><br>
+
+    <!-- DELETE FORM GOES HERE -->
+    <form action="/user/<%= travelplan._id %>?_method=DELETE" class="delete-form" method="POST">
+      <input type="submit" value="Delete">
+    </form>
     
     <!-- THE FOOTER TAG PARTIAL -->
     <%- include("../partials/footer") %>

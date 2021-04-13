@@ -55,6 +55,7 @@ router.get("/user/new", isAuthorized, travelplansCtrl.new);
 
 
 // DELETE
+router.delete("/user/:id", isAuthorized, travelplansCtrl.destroy);
 
 // UPDATE
 router.put("/user/:id", isAuthorized, travelplansCtrl.update);
@@ -66,8 +67,7 @@ router.post("/user/new", isAuthorized, travelplansCtrl.create);
 router.get("/user/:id/edit", isAuthorized, travelplansCtrl.edit);
 
 // SHOW
-// router.post("/user/new", travelplansCtrl.show);
-
+router.get("/user/:id", isAuthorized, travelplansCtrl.show);
 
 
 ///////////////////////////////
