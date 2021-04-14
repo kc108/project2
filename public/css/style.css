@@ -21,3 +21,15 @@
     display: flex;
 }
 
+.centered-user-index {
+    text-align: center;
+}
+
+.right-aligned-logout-button {
+    text-align: right;
+}
+
+
+.field {
+ width: 20%;
+}
