@@ -4,15 +4,14 @@
   <%- include("../partials/head") %>
 
   <body>
-    <!-- THE HEADER TAG PARTIAL -->
-    <%- include("../partials/header") %>
+    
 
     <main>
       <div class="container-user-index">
       <!-- ********* LOGOUT ********* -->
-      <div class=" is-link right-aligned-logout-button">
-      <a href="/auth/logout"><button class="button is-link">Logout</button></a>
-      </div>
+        <div class=" is-link right-aligned-logout-button">
+          <a href="/auth/logout"><button class="button is-link move-logout">Logout</button></a>
+        </div>
 
       <div class="background-img">
       <div class="centered-user-index">
@@ -58,12 +57,7 @@
 </form>
 </div>
 
-<section class="hero is-small is-link is-bold">
-  <div class="hero-body">
-    <div class="container">
-    </div>
-  </div>
-</section>
+
 
       <% for (const travelplan of travelplans) { %>
       <div class="card">
@@ -80,9 +74,7 @@
       <% } %>
 
     </div>
-    </main>
-
-    
+    </main>    
   </div>
   </body>
 </html>

@@ -55,6 +55,7 @@
 
 .submit-button {
     margin: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -137,5 +138,23 @@
 #edit-delete-button {
     left: -15px;
 }
+
+.move-logout {
+    margin-top: 20px;
+    margin: 15px;
+}
+
+.column {
+    margin: 25px;
+    margin-left: -25px;
+    background-color:  rgba(255, 255, 255, 0.5);
+}
+
+.note-column {
+    background-color:  rgba(255, 255, 255, 0.5);
+    margin: 25px;
+    margin-left: -25px;
+}
+
 
 
