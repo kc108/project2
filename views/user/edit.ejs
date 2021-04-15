@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <!-- THE HEAD TAG PARTIAL -->
   <%- include("../partials/head") %>
   <body>
+    <div id="bg">
+     
     <!-- THE HEADER TAG PARTIAL -->
     <%- include("../partials/header") %>
-
-    <section class="hero is-success is-small has-text-centered">
-      <div class="hero-body">
-        <p class="title">Itenarary for <%= travelplan.location %> </p>
+      <section class="hero is-small has-text-centered">
+      <div class="hero-body has-text-black">
+        <p class="title has-text-dark-danger is-warning">Itenarary for <%= travelplan.location %> </p>
       </div>
     </section>
     <br><br>
-    <form action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
+    
+  <div id="edit-section" class="edit-section">
+    <div id="location-input">
+      <form action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
+    </div>
+    
       Location: <input type="text" name="location" placeholder="location" value="<%= travelplan.location %>" required/><br><br>
 
       Day: <input type="text" name="tripDate" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"required />
@@ -28,14 +35,16 @@
 
       <input type="submit" name="" value="Update Itenarary" />
     </form>
-    <br><br>
+  </div>
+  <br><br>
 
     <!-- DELETE FORM GOES HERE -->
     <form action="/user/<%= travelplan._id %>?_method=DELETE" class="delete-form" method="POST">
-      <input type="submit" value="Delete">
+      <input class="button is-link delete-button" type="submit" value="Delete">
     </form>
-    
+   </div>
     <!-- THE FOOTER TAG PARTIAL -->
     <%- include("../partials/footer") %>
+    </div>
   </body>
 </html>

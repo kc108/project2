@@ -32,7 +32,6 @@
 
 .field {
  width: 70%;
- margin: 15px;
 }
 
 .notes-formatting {
@@ -51,16 +50,13 @@
 }
 
 .columns {
-    margin: auto;
+    margin: 20px;
 }
 
 .submit-button {
     margin: 15px;
 }
 
-div.column {
-    margin: auto;
-}
 
 .button.is-link.blue-button {
     margin-left: 20px;
@@ -77,4 +73,31 @@ div.column {
 
 .background-img {
     background-image: url("");
+}
+
+.button.is-link.delete-button {
+    margin: 15px;
+}
+
+#edit-section.edit-section {
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+    text-align: left !important;
+}
+
+#edit-section.edit-section form {
+    text-align: left !important;
+}
+
+#bg {
+    background-image: url("https://www.tahitiislandstravel.com/client/files/iles/boratimmckenna-5-vig3.jpg");
+    width: 100%;
+    height: 100vh;
+    opacity: 50%;
+}
+
+#location-input {
+    position: absolute;
+    
 }
