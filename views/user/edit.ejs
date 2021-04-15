@@ -14,34 +14,47 @@
       </div>
     </section>
     <br><br>
-    
+  
   <div id="edit-section" class="edit-section">
-    <div id="location-input">
       <form action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
-    </div>
     
-      Location: <input type="text" name="location" placeholder="location" value="<%= travelplan.location %>" required/><br><br>
 
-      Day: <input type="text" name="tripDate" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"required />
-      <br><br>
+        <div class="field">
+          <label class="label">Enter your Destination</label>
+          <input class="input" type="text" placeholder="e.g. Bora Bora" name="location" required value="<%= travelplan.location %>" />
+        </div>
+    
+        <div class="field">
+          <label class="label">Day</label>
+          <input class="input" type="text" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"required />
+        </div>
 
-      Subheading: <input type="description" name="subHeading" placeholder="Subheading/Category" value="<%= travelplan.subHeading %>"/><br><br>
 
-      Notes: <input type="text" name="notes" placeholder="Notes" value="<%= travelplan.notes %>" /><br><br>
+      <div class="field">
+        <label class="label">Subheading/Category</label>
+        <input class="input" type="text" placeholder="e.g. Museum, Entertainment, etc." value="<%= travelplan.subHeading %>" />
+      </div>
 
-      Address: <input type="text" name="address" placeholder="Address Location" value="<%= travelplan.address %>"
-      />
-      <br><br>
+      <div class="field">
+        <label class="label">Notes</label>
+        <input class="input" type="text" placeholder="" value="<%= travelplan.notes %>">
+      </div>
 
-      <input type="submit" name="" value="Update Itenarary" />
+      <div class="field">
+        <label class="label">Location</label>
+        <input class="input" type="text" placeholder="Address Location" value="<%= travelplan.address %>">
+      </div>
+
+      <input class="button is-link" type="submit" name="" value="Update Itenarary" />
+
     </form>
-  </div>
-  <br><br>
-
     <!-- DELETE FORM GOES HERE -->
     <form action="/user/<%= travelplan._id %>?_method=DELETE" class="delete-form" method="POST">
       <input class="button is-link delete-button" type="submit" value="Delete">
     </form>
+  </div>
+  <br><br>
+
    </div>
     <!-- THE FOOTER TAG PARTIAL -->
     <%- include("../partials/footer") %>
