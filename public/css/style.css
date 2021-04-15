@@ -104,3 +104,8 @@
     position: absolute;
     margin: 20px;
 }
+
+.home-image {
+    position: absolute;
+    right: 0%;
+}
