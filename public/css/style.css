@@ -120,6 +120,14 @@
     background-size: cover;
 }
 
+.container-user-index {
+    background-image: url("https://cdn.mos.cms.futurecdn.net/AEiXQdY9F6jEsFQYxGA5J5.jpg");
+    width: 100%;
+    height: 100vh;
+    opacity: 85%;
+    background-size: cover;
+}
+
 #location-input {
     position: absolute;
     margin: 20px;

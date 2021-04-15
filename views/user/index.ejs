@@ -8,7 +8,7 @@
     <%- include("../partials/header") %>
 
     <main>
-
+      <div class="container-user-index">
       <!-- ********* LOGOUT ********* -->
       <div class=" is-link right-aligned-logout-button">
       <a href="/auth/logout"><button class="button is-link">Logout</button></a>
@@ -19,7 +19,7 @@
       <h1 class="title">My Destination</h1>
       </div>
  <!-- **********NEW TRAVELPLANS FORM**************** -->
- <form class="left-form" action="/user/new" method="post">
+<form class="left-form" action="/user/new" method="post">
 <div class="left-column-padding"></div>
   <div class="columns"> 
     <div class="column">
@@ -58,7 +58,7 @@
 </form>
 </div>
 
-<section class="hero is-medium is-link is-bold">
+<section class="hero is-small is-link is-bold">
   <div class="hero-body">
     <div class="container">
     </div>
@@ -78,10 +78,11 @@
       </div>
         </div>  
       <% } %>
-</div>
+
+    </div>
     </main>
 
-    <!-- THE HEAD TAG PARTIAL -->
-    <%- include("../partials/footer") %>
+    
+  </div>
   </body>
 </html>
