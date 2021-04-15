@@ -19,7 +19,7 @@
       <h1 class="title">My Destination</h1>
       </div>
  <!-- **********NEW TRAVELPLANS FORM**************** -->
- <form action="/user/new" method="post">
+ <form class="left-form" action="/user/new" method="post">
 <div class="left-column-padding"></div>
   <div class="columns"> 
     <div class="column">
@@ -45,14 +45,18 @@
     </div>
 
     <div class="column">
+      <div class="right-column-editing">
       <label class="label">Notes</label>
       <div class="notes-formatting">
         <textarea class="textarea" name="notes" placeholder=""></textarea>
       </div>
     </div>
   </div>
-  <input type="submit" value="Submit" />
+</div>
+<div class="submit-button">
+  <input class="button is-link blue-button" type="submit" value="Submit" />
 </form>
+</div>
       
       <% for (const travelplan of travelplans) { %>
       

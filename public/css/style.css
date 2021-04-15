@@ -32,11 +32,36 @@
 
 .field {
  width: 70%;
- margin: 75px;
+ margin: 15px;
 }
 
 .notes-formatting {
-    width: 50%;
+    width: 90%;
     margin: auto;
     margin-top: 15px;
+}
+
+.right-column-editing {
+    justify-content: left;
+}
+
+.m-6 {
+    width: 50%;
+    margin: 1rem;
+}
+
+.columns {
+    margin: auto;
+}
+
+.submit-button {
+    margin: 15px;
+}
+
+div.column {
+    margin: auto;
+}
+
+.button.is-link.blue-button {
+    margin-left: 20px;
 }
