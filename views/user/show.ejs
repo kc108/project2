@@ -5,13 +5,14 @@
         <title>Plan for the Day</title>
     </head>
     <body>
+        <div id="bg">
+        <div class="background-img-show">
         <div class="final-show">
         <section class="hero is-primary has-text-centered">
             <div class="hero-body">
               <p class="title">Itenarary for <%= travelplan.location %> on <%= travelplan.tripDate %> </p>
             </div>
             <div><%= travelplan.subHeading %></div>
-            <div><%= travelplan.notes %></div>
             <div><%= travelplan.notes %></div>
             <div><%= travelplan.address %></div>
             <br><br>
@@ -20,5 +21,7 @@
             </nav>
         </p>
     </div>
-    </body>
+</div>
+</div>
+</body>
 </html>

@@ -101,6 +101,16 @@
     top: 40px;
 }
 
+.container-signup {
+    justify-content: center;
+    width:30%; 
+    margin: auto;
+    background-color:  rgba(255, 255, 255, 0.5);
+    padding: 1em;
+    position: relative;
+    top: 40px;
+}
+
 #edit-section.edit-section form {
     text-align: left !important;
 }
@@ -115,6 +125,14 @@
 
 .final-show {
     background-image: url("https://ak.picdn.net/shutterstock/videos/1032497921/thumb/1.jpg");
+    width: 100%;
+    height: 100vh;
+    opacity: 85%;
+    background-size: cover;
+}
+
+.background-img-show {
+    background-image: url("https://ak.picdn.net/shutterstock/videos/1034296229/thumb/1.jpg");
     width: 100%;
     height: 100vh;
     opacity: 85%;
@@ -155,6 +173,4 @@
     margin: 25px;
     margin-left: -25px;
 }
-
-
 
