@@ -5,18 +5,10 @@
   <%- include("../partials/head") %>
   <body>
     <div id="bg">
-     
-    <!-- THE HEADER TAG PARTIAL -->
-    <%- include("../partials/header") %>
-      <section class="hero is-small has-text-centered">
-      <div class="hero-body has-text-black">
-        <p class="title has-text-dark-danger is-warning">Itenarary for <%= travelplan.location %> </p>
-      </div>
-    </section>
-    <br><br>
+  
   
   <div id="edit-section" class="edit-section">
-      <form action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
+      <form class="center-form" action="/user/<%= travelplan.id %>?_method=PUT" method="POST" class="new-travelplan-form has-text-centered" id="new-travelplan-form">
     
 
         <div class="field">
@@ -37,7 +29,7 @@
 
       <div class="field">
         <label class="label">Notes</label>
-        <input class="input" type="text" placeholder="" value="<%= travelplan.notes %>">
+        <textarea class="input textarea" type="text" placeholder="" value="<%= travelplan.notes %>"></textarea>
       </div>
 
       <div class="field">
@@ -50,14 +42,8 @@
     </form>
     <!-- DELETE FORM GOES HERE -->
     <form action="/user/<%= travelplan._id %>?_method=DELETE" class="delete-form" method="POST">
-      <input class="button is-link delete-button" type="submit" value="Delete">
+      <input id="edit-delete-button" class="button is-link delete-button" type="submit" value="Delete">
     </form>
   </div>
-  <br><br>
-
-   </div>
-    <!-- THE FOOTER TAG PARTIAL -->
-    <%- include("../partials/footer") %>
-    </div>
   </body>
 </html>
