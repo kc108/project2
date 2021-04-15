@@ -9,12 +9,12 @@
 
     <main>
 
-      <!-- *********DISPLAY OUR GOALS********* -->
-      <div class="right-aligned-logout-button">
-      <a href="/auth/logout"><button class="button">Logout</button></a>
+      <!-- ********* LOGOUT ********* -->
+      <div class=" is-link right-aligned-logout-button">
+      <a href="/auth/logout"><button class="button is-link">Logout</button></a>
       </div>
 
-
+      <div class="background-img">
       <div class="centered-user-index">
       <h1 class="title">My Destination</h1>
       </div>
@@ -34,8 +34,8 @@
       </div>
 
       <div class="field">
-      <label class="label">Subheading/Category</label>
-      <input class="input" type="description" name="subHeading" placeholder="e.g. Entertainment, Reservation, etc." />
+        <label class="label">Subheading/Category</label>
+        <input class="input" type="description" name="subHeading" placeholder="e.g. Entertainment, Reservation, etc." />
       </div>
 
       <div class="field">
@@ -57,19 +57,28 @@
   <input class="button is-link blue-button" type="submit" value="Submit" />
 </form>
 </div>
-      
+
+<section class="hero is-medium is-link is-bold">
+  <div class="hero-body">
+    <div class="container">
+    </div>
+  </div>
+</section>
+
       <% for (const travelplan of travelplans) { %>
-      
-        <a href="/user/<%= travelplan.id %>/edit">Edit</a>
-        <a href="/user/<%= travelplan.id %>">Details</a>
-      <h2 class="subtitle is-3"><%= travelplan.location %></h2>
-      <h2 class="subtitle is-3"><%= travelplan.tripDate %></h2>
+      <div class="card">
+        <div class="card-image">
+
+      <h2 class="title is-4"><%= travelplan.location %></h2>
+      <h4 class="subtitle is-5"><%= travelplan.tripDate %></h4>
+      <a href="/user/<%= travelplan.id %>/edit">Edit</a>
+      <a href="/user/<%= travelplan.id %>">Details</a>
+      <br><br>
+
+      </div>
+        </div>  
       <% } %>
-
-     
-
-
-      
+</div>
     </main>
 
     <!-- THE HEAD TAG PARTIAL -->
