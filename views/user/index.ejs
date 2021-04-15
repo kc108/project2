@@ -20,22 +20,37 @@
       </div>
  <!-- **********NEW TRAVELPLANS FORM**************** -->
  <form action="/user/new" method="post">
+<div class="left-column-padding"></div>
+  <div class="columns"> 
+    <div class="column">
+      <div class="field">
+        <label class="label">Enter your Destination</label>
+        <input class="input" type="text" placeholder="e.g. Bora Bora" name="location" required />
+      </div>
 
-  <div class="field">
-    <label class="label">Enter your Destination</label>
-  <input class="input" type="text" placeholder="e.g. Bora Bora" name="location" required />
+      <div class="field">
+        <label class="label">Date</label>
+        <input class="input" type="text" placeholder="Day of Week, Month, Day" name="tripDate" required />
+      </div>
+
+      <div class="field">
+      <label class="label">Subheading/Category</label>
+      <input class="input" type="description" name="subHeading" placeholder="e.g. Entertainment, Reservation, etc." />
+      </div>
+
+      <div class="field">
+        <label class="label">Location</label>
+        <input class="input" type="text" name="address" placeholder="e.g. 123 Annebody Home Road" />
+      </div>
+    </div>
+
+    <div class="column">
+      <label class="label">Notes</label>
+      <div class="notes-formatting">
+        <textarea class="textarea" name="notes" placeholder=""></textarea>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <label class="label">Date</label>
-  <input class="input" type="text" placeholder="Day of Week, Month, Day" name="tripDate" required />
-  </div>
-
-  <input type="description" name="subHeading" placeholder="Subheading/Category" />
-
-  <input type="text" name="notes" placeholder="Notes" />
-
-  <input type="text" name="address" placeholder="Address Location" />
   <input type="submit" value="Submit" />
 </form>
       
