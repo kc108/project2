@@ -193,8 +193,13 @@
     padding: 1em;
     position: relative;
     top: 40px;
+    margin-top: 76px;
 }
 
 .center-return {
     font-size: 17px;
+}
+
+.hero-body {
+    text: blue;
 }

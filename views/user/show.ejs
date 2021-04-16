@@ -8,16 +8,23 @@
         <div id="bg">
         <div class="background-img-show">
         <div class="final-show">
+
+          <section class="hero is-small is-light">
             <div class="hero-body">
               <p class="title show-title">Itenarary for <%= travelplan.location %> on <%= travelplan.tripDate %> </p>
             </div>
+          </section>
+
             <div class="show-section">
               <label class="label">🎬 Subheading/Category: <div><%= travelplan.subHeading %></div></label><br>            
               <label class="label">📋 Notes: <div><%= travelplan.notes %></div></label><br>
               <label class="label">📍 Location: <div><%= travelplan.address %></div></label>
               <br><br>
             <nav class="center-return">
-                <a  href="/user/index">🌏 Return to Vacation Itenarary</a>
+                <a  href="/user/index">
+                  <strong>
+                  🌏 Return to Vacation Itenarary</a>
+                  </strong>
             </nav>
           </div>
         </div>
