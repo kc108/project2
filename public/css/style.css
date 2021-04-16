@@ -203,3 +203,19 @@
 .hero-body {
     text: blue;
 }
+
+@media (max-width: 500px) {
+    .container-login {
+        width:91%; 
+        margin: auto;
+        position: relative;
+        top: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .left-form {
+        margin-left: 45px;
+    }
+
+}
