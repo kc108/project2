@@ -204,6 +204,10 @@
     text: blue;
 }
 
+.card-format {
+    padding-top: 15px;
+}
+
 @media (max-width: 500px) {
     .container-login {
         width:91%; 
