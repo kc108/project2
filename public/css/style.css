@@ -219,3 +219,11 @@
     }
 
 }
+
+@media (max-width: 500px) {
+    .show-section {
+        width: 60%;
+        top: 20px;
+        margin-top: 23px;
+    }
+}

@@ -63,8 +63,9 @@ DESTROY
 
 
 ## Challenges
-- Found styling with Bulma to be a bit clunky and difficult to get things 'exactly' how I intended them to be displayed
-- 
+- Found styling with Bulma to be a bit clunky and difficult to get things 'exactly' how I intended them to be displayed. 
+- Learned that I should design for mobile first, then desktop
+
 
 ## Existing Bugs
-None that I am aware of.
+TBD.
