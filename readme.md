@@ -6,7 +6,11 @@ Travel-Vacation-Planner
 
 
 ## Project Summary
+A travelplanning app to help one plan there itenarary for trips. A user enters their destination and other details, including notes about the event. Once submit is entered they will be able to see details about all upcoming trips planned for in one location. A user has the ability to return to the itenarary and see a list of all the trips in one spot on the user/index page. 
 
+## Future Features
+- Ability to select a date range from a calendar and make multiple days
+- Ability to take photos from one's mobile device and upload them to the event planned to keep a journal that can be shared with friends
 
 
 ## Technology Used
