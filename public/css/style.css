@@ -176,3 +176,25 @@
     margin-left: -25px;
 }
 
+.show-title {
+    text-align: center;
+}
+
+.show-card {
+    text-align: left;
+}
+
+  .show-section {
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+    text-align: left !important;
+    background-color: white;
+    padding: 1em;
+    position: relative;
+    top: 40px;
+}
+
+.center-return {
+    font-size: 17px;
+}
