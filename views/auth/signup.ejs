@@ -3,48 +3,38 @@
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/head") %>
     <body>
-        <main>
-            <div id="bg">
-                <div class="container-signup">
-                    <div class="field">
-                        <form action="/auth/signup" method="post">
-                            <div class="field">
-                                <label class="label">Username</label>
-                                <div class="control">
-                                    <input
-                                        class="input"
-                                        type="text"
-                                        placeholder="username/email"
-                                        name="username"
-                                    /><br /><br />
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Password</label>
-                                <div class="control">
-                                    <input
-                                        class="input"
-                                        type="password"
-                                        placeholder="Enter Password Here"
-                                        name="password"
-                                    />
-                                    <i class="fas fa-lock"></i><br /><br />
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
+     <main>
+        <div id="bg">
+         <div class="container-signup">
+           <div class="field">
+            <form action="/auth/signup" method="post">
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                 <input class="input" type="text" placeholder="username/email" name="username" /><br><br>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                 <input class="input" type="password" placeholder="Enter Password Here" name="password" />
+                 <i class="fas fa-lock"></i><br /><br />
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
                                     <input
                                         class="button is-link"
                                         type="submit"
                                         value="sign up"
                                     />
-                                </div>
-                            </div>
-                        </form>
-                        <br />
-                    </div>
                 </div>
-            </div>
-        </main>
+              </div>
+            </form>
+            <br>
+           </div>
+         </div>
+        </div>
+     </main>
     </body>
 </html>

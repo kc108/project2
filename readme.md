@@ -6,7 +6,10 @@ Travel-Vacation-Planner
 
 
 ## Project Summary
-A travelplanning app to help one plan there itenarary for trips. A user enters their destination and other details, including notes about the event. Once submit is entered they will be able to see details about all upcoming trips planned for in one location. A user has the ability to return to the itenarary and see a list of all the trips in one spot on the user/index page. 
+A travelplanning app to help one plan detailed itenararies for your future vacation. 
+
+A user enters their destination, including notes, locations and subheadings/category of event. Once submit is entered they will be able to see details about all upcoming trips planned for in one location either as a detailed view of a specific day or as a less detailed view that displays all of the days and locations on the user/index page.
+
 
 ## Future Features
 - Ability to select a date range from a calendar and make multiple days
@@ -19,6 +22,9 @@ CSS
 JavaScript
 Node.js
 Bcrypt
+MongoDB
+Express
+Mongoose
 
 
 ## Models
@@ -65,7 +71,8 @@ DESTROY
 ## Challenges
 - Found styling with Bulma to be a bit clunky and difficult to get things 'exactly' how I intended them to be displayed. 
 - Learned that I should design for mobile first, then desktop
+- Found it challenging to style for multiple mobile devices and platforms (e.g. Safari, Chrome, iPad, iPhone)
 
 
 ## Existing Bugs
-TBD.
+N/A
