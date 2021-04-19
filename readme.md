@@ -75,4 +75,5 @@ DESTROY
 
 
 ## Existing Bugs
-N/A
+- User/Index page should not have space between left and right columns
+- TBD
