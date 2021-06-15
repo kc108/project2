@@ -34,10 +34,12 @@ const update = async (req, res) => {
     const user = req.user;
     // console.log(user)
     // find the travelplan that matches the id
-    const travelplan = user.travelplans.find(travelplan => (travelplan._id.toString() === req.params.id))
+    const travelplan = user.travelplans.findIndex(travelplan => (travelplan._id.toString() === req.params.id))
     console.log(travelplan)
-    // modify the image
-    Object.assign(travelplan, req.body)
+    // modify the travelplan
+    user.travelplans[travelplan].location = req.body.location
+    // user.travelplans[travelplan].tripDate = req.body.tripDate
+    console.log(req.user)
     //save the user
     await user.save()
     // redirect to /user

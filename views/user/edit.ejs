@@ -13,28 +13,27 @@
 
         <div class="field">
           <label class="label">Enter your Destination</label>
-          <input class="input" type="text" placeholder="e.g. Bora Bora" name="location" required value="<%= travelplan.location %>" />
+          <input class="input" name="location" type="text" placeholder="e.g. Bora Bora" name="location" required value="<%= travelplan.location %>" />
         </div>
-    
         <div class="field">
           <label class="label">Day</label>
-          <input class="input" type="text" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"required />
+          <input class="input" name="tripDate" type="text" placeholder="Planned Activity" value="<%= travelplan.tripDate %>"required />
         </div>
 
 
       <div class="field">
         <label class="label">Subheading/Category</label>
-        <input class="input" type="text" placeholder="e.g. Museum, Entertainment, etc." value="<%= travelplan.subHeading %>" />
+        <input class="input" name="subHeading" type="text" placeholder="e.g. Museum, Entertainment, etc." value="<%= travelplan.subHeading %>" />
       </div>
 
       <div class="field">
         <label class="label">Notes</label>
-        <textarea class="input textarea" type="text" placeholder=""><%= travelplan.notes %></textarea>
+        <textarea class="input textarea" name="notes" type="text" placeholder=""><%= travelplan.notes %></textarea>
       </div>
 
       <div class="field">
         <label class="label">Location</label>
-        <input class="input" type="text" placeholder="Address Location" value="<%= travelplan.address %>">
+        <input class="input" name="address" type="text" placeholder="Address Location" value="<%= travelplan.address %>">
       </div>
 
       <input class="button is-link" type="submit" name="" value="Update Itenarary" />
