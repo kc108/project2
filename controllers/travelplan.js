@@ -38,7 +38,10 @@ const update = async (req, res) => {
     console.log(travelplan)
     // modify the travelplan
     user.travelplans[travelplan].location = req.body.location
-    // user.travelplans[travelplan].tripDate = req.body.tripDate
+    user.travelplans[travelplan].tripDate = req.body.tripDate
+    user.travelplans[travelplan].subHeading = req.body.subHeading
+    user.travelplans[travelplan].address = req.body.address
+    user.travelplans[travelplan].notes = req.body.notes
     console.log(req.user)
     //save the user
     await user.save()
